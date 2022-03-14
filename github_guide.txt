@@ -1,0 +1,9 @@
+1. Create a repository on github manually 
+2, Git clone repository link on command line
+3. Add the files that you want to save under repository folder 
+4. type "git status" to see what files are available to commi t
+5. type "git add <FILENAME> to add each file you want to add to commit"
+6. type "git commit -m <MESSAGE>"
+7. type git push origin <BRANCH_NAME>, default to main, if you don't have a branch already "git checkout -b <BRANCH_NAME>, if you need to switch to a created branch git checkout <BRANCH>
+8. type git branch to confirm what branch you are on
+X
