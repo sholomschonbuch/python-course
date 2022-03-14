@@ -30,15 +30,19 @@ game = [rock, paper, scissors]
 
 player = input("1 for rock, 2 for paper, 3 scissors\n")
 player = int(player) - 1
-player = game[player]
-print(player)
-computer = random.choice(game)
-print(computer)
-#print(game[computer])
 
+print(game[player])
+computer = random.randint(0, len(game))
+computer_choice = game[computer]
+print(computer_choice)
 
-#if player == 0 and computer == 3:
-#    print("yeah you win!!")
-#if player == 0 and computer == 3:
-#if player == 0 and computer == 3:
-
+if player == computer:
+    print("Tie game!")
+elif player == 0 and computer == 2:
+    print("You win!!")
+elif player == 1 and computer == 0:
+    print("You win!")
+elif player == 2 and computer == 1:
+    print("You win!!!")
+else:
+    print("You lose!")
