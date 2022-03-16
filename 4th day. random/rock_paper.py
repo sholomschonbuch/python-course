@@ -29,20 +29,24 @@ scissors = '''
 game = [rock, paper, scissors]
 
 player = input("1 for rock, 2 for paper, 3 scissors\n")
-player = int(player) - 1
+while player != "e":
 
-print(game[player])
-computer = random.randint(0, len(game))
-computer_choice = game[computer]
-print(computer_choice)
+    player = int(player) - 1
 
-if player == computer:
-    print("Tie game!")
-elif player == 0 and computer == 2:
-    print("You win!!")
-elif player == 1 and computer == 0:
-    print("You win!")
-elif player == 2 and computer == 1:
-    print("You win!!!")
-else:
-    print("You lose!")
+    print(game[player])
+    computer = random.randint(0, len(game) - 1)
+    computer_choice = game[computer]
+    print(computer_choice)
+
+    if player == computer:
+        print("Tie game!")
+    elif player == 0 and computer == 2:
+        print("You win!!")
+    elif player == 1 and computer == 0:
+        print("You win!")
+    elif player == 2 and computer == 1:
+        print("You win!!!")
+    else:
+        print("You lose!")
+    player = input("1 for rock, 2 for paper, 3 scissors. enter e to exit!\n")
+
