@@ -6,7 +6,7 @@ clear = lambda: os.system('cls')
 
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 chosen_word = random.choice(word_list)
-
+all_answers = []
 
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
 answer_list = []
@@ -31,6 +31,8 @@ while lives > 0 and game == False:
 
     if correct == False:
         lives -= 1
+        all_answers.append(guess)
+    print(f"History: {all_answers}")
     print(stages[lives])
     print(f"you guessed {guess}")
     print(answer_list)
@@ -41,6 +43,7 @@ while lives > 0 and game == False:
     if lives == 0:
         print(stages[0])
         print("you lost!")
+        print(chosen_word)
                 
 print(logo)            
 
