@@ -1,19 +1,12 @@
-from itertools import count
-
-
-def prime_check(number):
-    for n in range(number, 0):
-        number = number % n
-        if (number - int(number) == 0):
-            print("Not prime")
-        else:
-            print("Prime")
-
-
-
-
-
+def prime_checker(number):
+    is_prime = True
+    for i in range(2, number):
+        if (number % i) == 0:
+            is_prime = False
+    if is_prime == True:
+        print("It's a prime number.")
+    else:
+        print("it's not a prime number.")
 
 
 n = int(input("Check this number: "))
-prime_check(number=n)
