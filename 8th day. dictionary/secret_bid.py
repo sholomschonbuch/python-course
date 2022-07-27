@@ -9,12 +9,13 @@ while contin == "yes":
     name = input("What's your name? ")
     bid = int(input("What's your bid? $"))
     biders[name] = bid
-    contin = input("Are there more bidders? type yes or no")
+    contin = input("Are there more bidders? type yes or no. ")
     clear()
 
-for bid in biders:
-    if biders[bid] > highest_bid:
-        highest_bid = biders[bid]
+for k,bid in biders.items():
+    if bid > highest_bid:
+        highest_bid = bid
+        top = f"{k} at {bid}"
 logo = '''
                          ___________
                          \         /
@@ -28,6 +29,7 @@ logo = '''
                        .-------------.
                       /_______________\\
 '''
+print(f"The highest bid was {top}")
+print(logo)
 
-print(f"The highest bid was {highest_bid.keys()}")
 
