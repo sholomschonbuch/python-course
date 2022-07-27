@@ -1,3 +1,5 @@
+import os
+clear = lambda: os.system('cls')
 
 contin = "yes"
 biders = {}
@@ -8,6 +10,7 @@ while contin == "yes":
     bid = int(input("What's your bid? $"))
     biders[name] = bid
     contin = input("Are there more bidders? type yes or no")
+    clear()
 
 for bid in biders:
     if biders[bid] > highest_bid:
@@ -25,6 +28,6 @@ logo = '''
                        .-------------.
                       /_______________\\
 '''
-print(biders[name])
-print(f"The highest bid was {highest_bid}")
+
+print(f"The highest bid was {highest_bid.keys()}")
 
