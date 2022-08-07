@@ -41,7 +41,6 @@ while lives > 0 and game == False:
         game = True
     
     if lives == 0:
-        print(stages[0])
         print("you lost!")
         print(chosen_word)
                 
