@@ -1,5 +1,5 @@
 
-#calculator
+#calculator functions
 
 #Add
 def add(n1, n2):
@@ -19,23 +19,23 @@ oporations = {
     "-": subtract,
     "/": devide
 }
-
-num1 = int(input("Enter your first number: "))
-for symbol in oporations:
-    print(symbol)
-oporation_symbol = input("Pick a simbol from the list above: ")
-num2 = int(input("Enter your second number: "))
-calculation_function = oporations[oporation_symbol]
-answer = calculation_function(num1, num2)
-print(f"{num1} {oporation_symbol} {num2} = {answer}")
-q = input("type yes to continue or no to stop: ")
-while q != "no":
+#calculator
+def calcultor(): 
+    num1 = int(input("Enter your first number: "))
     for symbol in oporations:
         print(symbol)
-    oporation_symbol = input("Pick a simbol from the list above: ")
-    calculation_function = oporations[oporation_symbol]
-    num3 = int(input("Enter your second number: "))
-    answer2 = calculation_function(answer, num3)
-    print(f"{answer} {oporation_symbol} {num3} = {answer2}")
-    answer = answer2
-    q = input("type yes to continue or no to stop: ")
+    continues = True
+    
+    while continues:
+        oporation_symbol = input("Pick a oporation: ")
+        calculation_function = oporations[oporation_symbol]
+        num2 = int(input("Enter your next number: "))
+        answer = calculation_function(num1, num2)
+        print(f"{num1} {oporation_symbol} {num2} = {answer}")
+        num1 = answer
+        q = input("type yes to continue or no to stop: ")
+        if q == "no":
+            continues = False
+        elif q == "clear":
+            calcultor()
+calcultor()
